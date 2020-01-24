@@ -35,6 +35,11 @@
       "type": "chef-solo",
       "cookbook_paths": ["./berks-cookbooks"],
       "run_list": ["dev_env::default"]
+    },
+    {
+      "type": "file",
+      "source": "./It_Jobs_Watch_Data_Package-master",
+      "destination": "/home/ubuntu"
     }
 
   ]
