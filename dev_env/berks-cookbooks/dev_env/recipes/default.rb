@@ -31,6 +31,7 @@
 apt_update
 # package ["python3.6", "python3-pip"]
 
+# ////////////////////////////////////////////////////////////////
 
 # package "python-pip" do
 #   action :install
@@ -63,6 +64,8 @@ apt_update
 #   EOH
 # end
 
+# ////////////////////////////////////////////////////////////////////
+
 package "python3-pip" do
   action :install
 end
@@ -93,6 +96,8 @@ bash 'install dependecies for app' do
   sudo pip3 install configmanager
   EOH
 end
+
+# ///////////////////////////////////////////////////////////////////////
 
 directory '/home/ubuntu/Downloads/' do
   owner 'root'

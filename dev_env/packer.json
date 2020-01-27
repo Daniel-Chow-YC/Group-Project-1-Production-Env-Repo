@@ -15,7 +15,7 @@
     "associate_public_ip_address": "true",
 
     "ssh_keypair_name": "daniel-eng-48-first-key",
-    "ssh_private_key_file": "/home/jenkins/.ssh/daniel-eng-48-first-key.pem",
+    "ssh_private_key_file": "~/.ssh/daniel-eng-48-first-key.pem",
 
     "region": "eu-west-1",
     "source_ami_filter": {
@@ -34,7 +34,6 @@
   "provisioners": [
     {
       "type": "chef-solo",
-      "chef_license": "accept",
       "cookbook_paths": ["./berks-cookbooks"],
       "run_list": ["dev_env::default"]
     },
