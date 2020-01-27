@@ -34,6 +34,7 @@
   "provisioners": [
     {
       "type": "chef-solo",
+      "execute_command": "{{if .Sudo}}sudo {{end}}chef-solo --chef-license accept-silent -c {{.ConfigPath}} -j /tmp/node.json",
       "cookbook_paths": ["./berks-cookbooks"],
       "run_list": ["dev_env::default"]
     },
