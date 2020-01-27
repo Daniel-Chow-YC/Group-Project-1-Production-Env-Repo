@@ -105,3 +105,10 @@ directory '/home/ubuntu/Downloads/' do
   mode '0777'
   action :create
 end
+
+directory '/home/jenkins/Downloads/' do
+  owner 'root'
+  group 'root'
+  mode '0777'
+  action :create
+end
